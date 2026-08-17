@@ -43,13 +43,11 @@ export function WallWork({ exhibit, focused }: { exhibit: Exhibit; focused: bool
       </mesh>
 
       {/* picture light */}
-      <spotLight
-        position={[0, h / 2 + 1.5, 2.4]}
-        target-position={[0, 0, 0]}
-        angle={0.55}
-        penumbra={0.85}
-        distance={9}
-        intensity={focused ? 26 : 16}
+      <pointLight
+        position={[0, h / 2 + 0.9, 1.5]}
+        distance={6}
+        decay={2}
+        intensity={focused ? 14 : 8}
         color="#fff1d8"
       />
     </group>
