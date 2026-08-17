@@ -35,7 +35,7 @@ export function ArtifactGeometry({ shape }: { shape: ArtifactShape }) {
 }
 
 const MATERIALS: Record<ArtifactShape, { color: string; metalness: number; roughness: number }> = {
-  vessel: { color: "#a9secondary" as unknown as string, metalness: 0.05, roughness: 0.8 },
+  vessel: { color: "#b0653c", metalness: 0.05, roughness: 0.8 },
   mask: { color: "#5a3c26", metalness: 0.12, roughness: 0.55 },
   figure: { color: "#7b5a34", metalness: 0.72, roughness: 0.36 },
   head: { color: "#9a9284", metalness: 0.05, roughness: 0.9 },
@@ -85,7 +85,7 @@ export function Pedestal({
     <group>
       <mesh position={[0, height / 2, 0]}>
         <boxGeometry args={[width, height, width]} />
-        <meshStandardMaterial color="#efeae0" roughness=  {0.85} />
+        <meshStandardMaterial color="#efeae0" roughness={0.85} />
       </mesh>
       <mesh position={[0, height + 0.015, 0]}>
         <boxGeometry args={[width + 0.08, 0.03, width + 0.08]} />
