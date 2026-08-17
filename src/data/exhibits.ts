@@ -26,7 +26,7 @@ export type Exhibit = {
   detail: string;
   kind: ExhibitKind;
   image?: string;
-  gallery images?: never;
+  
   images?: string[];
   /** Replace with a GLB url when real artifact scans exist. */
   modelUrl?: string;
