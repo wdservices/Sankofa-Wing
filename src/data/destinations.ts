@@ -103,5 +103,5 @@ export const DESTINATIONS: Destination[] = [
   },
 ];
 
-export const destinationById = (id: string) =>
-  DESTINATIONS.find((d) => d.id === id) ?? DESTINATIONS[0];
+export const destinationById = (id: string): Destination =>
+  DESTINATIONS.find((d) => d.id === id) ?? (DESTINATIONS[0] as Destination);
