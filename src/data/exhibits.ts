@@ -12,7 +12,15 @@ import img08 from "@/assets/exhibit-08.jpg";
 export type ExhibitKind = "painting" | "photograph" | "document" | "textile" | "object";
 
 /** Procedural stand-in geometry keys used until real GLB artifacts are supplied. */
-export type ArtifactShape = "vessel" | "mask" | "figure" | "head" | "ring";
+export type ArtifactShape =
+  | "vessel"
+  | "mask"
+  | "figure"
+  | "head"
+  | "ring"
+  | "drum"
+  | "stool"
+  | "plaque";
 
 export type Exhibit = {
   id: string;
@@ -270,6 +278,100 @@ export const EXHIBITS: Exhibit[] = [
     anchor: [12, 0, -27],
     camera: [12, 2.1, -23.6],
     target: [12, 1.5, -27],
+  },
+  {
+    id: "talking-drum",
+    index: "12",
+    name: "Talking Drum",
+    collection: "Sankofa Wing",
+    period: "c. 1930",
+    galleryId: "heritage",
+    locationLabel: "Sankofa Wing — Pedestal III",
+    description: "An hourglass drum whose tension cords let a player imitate speech tones.",
+    detail:
+      "Carved from a single length of hardwood with a laced hide membrane at each end. Squeezing the cords raises the pitch, allowing the drum to carry spoken phrases across distance. Demonstration content.",
+    kind: "object",
+    shape: "drum",
+    image: img03,
+    audio: true,
+    anchor: [-5, 0, -24.5],
+    camera: [-5, 2.2, -21.2],
+    target: [-5, 1.7, -24.5],
+  },
+  {
+    id: "royal-stool",
+    index: "13",
+    name: "Royal Stool",
+    collection: "Sankofa Wing",
+    period: "attributed 19th century",
+    galleryId: "heritage",
+    locationLabel: "Sankofa Wing — Pedestal IV",
+    description: "A carved wooden stool held as the seat of a lineage's authority.",
+    detail:
+      "Cut from one block, with a crescent seat above a pierced central column. Stools of this type are kept as the spiritual seat of a family line rather than everyday furniture. Demonstration content.",
+    kind: "object",
+    shape: "stool",
+    image: img04,
+    anchor: [5, 0, -24.5],
+    camera: [5, 2.2, -21.2],
+    target: [5, 1.6, -24.5],
+  },
+  {
+    id: "bronze-plaque",
+    index: "14",
+    name: "Court Bronze Plaque",
+    collection: "Sankofa Wing",
+    period: "attributed 17th century",
+    galleryId: "heritage",
+    locationLabel: "Sankofa Wing — Display Case II",
+    description: "A relief plaque in cast brass showing an attendant of the royal court.",
+    detail:
+      "Cast by the lost-wax method and once fixed to a timber pillar of a palace hall. The patterned ground and beaded collar mark the figure's rank. Demonstration content.",
+    kind: "object",
+    shape: "plaque",
+    image: img07,
+    video: true,
+    anchor: [-17, 0, -23],
+    camera: [-14.2, 2.2, -22],
+    target: [-17, 1.6, -23],
+  },
+  {
+    id: "nok-figure",
+    index: "15",
+    name: "Terracotta Standing Figure",
+    collection: "Origins Collection",
+    period: "attributed 500 BCE – 200 CE",
+    galleryId: "origins",
+    locationLabel: "Origins Gallery — Pedestal I",
+    description: "A modelled terracotta figure with elaborate coiffure and beadwork.",
+    detail:
+      "Coil-built and burnished before firing. The pierced pupils and triangular eyes are diagnostic of the tradition. Demonstration content.",
+    kind: "object",
+    shape: "figure",
+    image: img03,
+    anchor: [-24, 0, 10],
+    camera: [-24, 2.2, 6.9],
+    target: [-24, 1.8, 10],
+  },
+  {
+    id: "river-passage",
+    index: "16",
+    name: "River Passage",
+    collection: "Culture & Identity",
+    period: "1954",
+    galleryId: "culture",
+    locationLabel: "Culture & Identity — North Wall",
+    description: "A painted study of canoes crossing a wide river at dusk.",
+    detail:
+      "Broad palette-knife strokes describe the current, with figures reduced to silhouettes against the last light. Demonstration content.",
+    kind: "painting",
+    image: img01,
+    images: [img01, img06],
+    anchor: [19, 3.2, 13.75],
+    rotationY: Math.PI,
+    size: [4.2, 3.3],
+    camera: [19, 2.6, 8.8],
+    target: [19, 3.1, 13.75],
   },
 ];
 
