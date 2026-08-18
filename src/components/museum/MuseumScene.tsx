@@ -30,11 +30,31 @@ function hotspotFor(e: Exhibit): Vec3 {
   return [e.anchor[0], e.anchor[1] + 1.95, e.anchor[2]];
 }
 
-function ObjectExhibit({ exhibit, focused }: { exhibit: Exhibit; focused: boolean }) {
+function ObjectExhibit({
+  exhibit,
+  focused,
+  onSelect,
+}: {
+  exhibit: Exhibit;
+  focused: boolean;
+  onSelect?: () => void;
+}) {
   const cased = exhibit.shape === "vessel" || exhibit.shape === "ring";
   const height = cased ? 0.95 : 1.15;
   return (
-    <group position={exhibit.anchor}>
+    <group
+      position={exhibit.anchor}
+      onClick={(e) => {
+        e.stopPropagation();
+        onSelect?.();
+      }}
+      onPointerOver={() => {
+        document.body.style.cursor = "pointer";
+      }}
+      onPointerOut={() => {
+        document.body.style.cursor = "auto";
+      }}
+    >
       <Pedestal height={height} width={cased ? 0.8 : 0.95} cased={cased} />
       <group position={[0, height + 0.35, 0]} scale={exhibit.shape === "ring" ? 0.9 : 1.15}>
         <ArtifactObject shape={exhibit.shape ?? "figure"} focused={focused} />
@@ -81,9 +101,9 @@ export function MuseumScene({
         return (
           <group key={e.id}>
             {WALL_KINDS.includes(e.kind) ? (
-              <WallWork exhibit={e} focused={focused} />
+              <WallWork exhibit={e} focused={focused} onSelect={() => goToExhibit(e)} />
             ) : (
-              <ObjectExhibit exhibit={e} focused={focused} />
+              <ObjectExhibit exhibit={e} focused={focused} onSelect={() => goToExhibit(e)} />
             )}
             <ExhibitHotspot
               exhibit={e}

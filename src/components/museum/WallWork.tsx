@@ -17,12 +17,33 @@ function Canvas2D({ url, size }: { url: string; size: [number, number] }) {
 }
 
 /** A framed wall work: painting, photograph, document or textile panel. */
-export function WallWork({ exhibit, focused }: { exhibit: Exhibit; focused: boolean }) {
+export function WallWork({
+  exhibit,
+  focused,
+  onSelect,
+}: {
+  exhibit: Exhibit;
+  focused: boolean;
+  onSelect?: () => void;
+}) {
   const [w, h] = exhibit.size ?? [3, 4];
   const frame = 0.16;
 
   return (
-    <group position={exhibit.anchor} rotation={[0, exhibit.rotationY ?? 0, 0]}>
+    <group
+      position={exhibit.anchor}
+      rotation={[0, exhibit.rotationY ?? 0, 0]}
+      onClick={(e) => {
+        e.stopPropagation();
+        onSelect?.();
+      }}
+      onPointerOver={() => {
+        document.body.style.cursor = "pointer";
+      }}
+      onPointerOut={() => {
+        document.body.style.cursor = "auto";
+      }}
+    >
       {/* frame */}
       <mesh>
         <boxGeometry args={[w + frame * 2, h + frame * 2, 0.12]} />
