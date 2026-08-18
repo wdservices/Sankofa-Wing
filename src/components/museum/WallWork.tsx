@@ -9,7 +9,7 @@ function Canvas2D({ url, size }: { url: string; size: [number, number] }) {
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.anisotropy = 4;
   return (
-    <mesh position={[0, 0, 0.07]}>
+    <mesh position={[0, 0, 0.1]}>
       <planeGeometry args={[size[0], size[1]]} />
       <meshStandardMaterial map={texture} roughness={0.75} />
     </mesh>
