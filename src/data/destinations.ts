@@ -93,8 +93,8 @@ export const DESTINATIONS: Destination[] = [
   {
     id: "heritage",
     index: "07",
-    name: "Heritage & Legacy",
-    description: "Closing gallery on continuity and change.",
+    name: "Sankofa Wing",
+    description: "Ancestral crafts, bronzes and the Sankofa collection.",
     galleryId: "heritage",
     position: [0, 2.9, -22.5],
     target: [0, 2.8, -31],

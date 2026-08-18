@@ -18,7 +18,7 @@ export const GALLERIES: Gallery[] = [
   { id: "hall", name: "Grand Hall", rect: { x1: -10, z1: -20, x2: 10, z2: 28 }, tone: "#f3e3c8" },
   { id: "origins", name: "Origins Gallery", rect: { x1: -28, z1: 2, x2: -10, z2: 14 }, tone: "#f0dfc0" },
   { id: "culture", name: "Culture & Identity", rect: { x1: 10, z1: 2, x2: 28, z2: 14 }, tone: "#efdcc0" },
-  { id: "heritage", name: "Heritage & Legacy", rect: { x1: -20, z1: -32, x2: 20, z2: -20 }, tone: "#eeddc4" },
+  { id: "heritage", name: "Sankofa Wing", rect: { x1: -20, z1: -32, x2: 20, z2: -20 }, tone: "#eeddc4" },
 ];
 
 export const WALL_HEIGHT = 7;

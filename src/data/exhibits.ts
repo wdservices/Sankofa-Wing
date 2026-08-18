@@ -57,7 +57,7 @@ export const EXHIBITS: Exhibit[] = [
     description:
       "An oil study of a working harbour at dawn, painted from the pier by an unrecorded coastal artist.",
     detail:
-      "The composition places the viewer at water level, among the moored boats. Pigment analysis of comparable works from the region suggests a locally milled ochre. This is demonstration content prepared for the Bluewaves Digital Heritage Archive.",
+      "The composition places the viewer at water level, among the moored boats. Pigment analysis of comparable works from the region suggests a locally milled ochre. This is demonstration content prepared for the Bluewaves Virtual Museum.",
     kind: "painting",
     image: img01,
     images: [img01, img08],
@@ -218,10 +218,10 @@ export const EXHIBITS: Exhibit[] = [
     id: "guardian-head",
     index: "09",
     name: "Guardian Head",
-    collection: "Heritage & Legacy",
+    collection: "Sankofa Wing",
     period: "undated",
     galleryId: "heritage",
-    locationLabel: "Heritage & Legacy — Pedestal II",
+    locationLabel: "Sankofa Wing — Pedestal II",
     description: "A carved stone head recovered from a boundary shrine.",
     detail:
       "Weathering on the left side indicates long outdoor exposure. Comparable heads mark thresholds and river crossings. Demonstration content.",
@@ -236,10 +236,10 @@ export const EXHIBITS: Exhibit[] = [
     id: "legacy-panel",
     index: "10",
     name: "Legacy Panel",
-    collection: "Heritage & Legacy",
+    collection: "Sankofa Wing",
     period: "1893 / 2024",
     galleryId: "heritage",
-    locationLabel: "Heritage & Legacy — North Wall",
+    locationLabel: "Sankofa Wing — North Wall",
     description:
       "A paired presentation of an archival print and its contemporary re-photograph.",
     detail:
@@ -257,10 +257,10 @@ export const EXHIBITS: Exhibit[] = [
     id: "ring-of-office",
     index: "11",
     name: "Ring of Office",
-    collection: "Heritage & Legacy",
+    collection: "Sankofa Wing",
     period: "c. 1910",
     galleryId: "heritage",
-    locationLabel: "Heritage & Legacy — Display Case",
+    locationLabel: "Sankofa Wing — Display Case",
     description: "A cast ring worn as an emblem of civic office.",
     detail:
       "Hollow-cast with a raised bezel that once carried an inset stone. Records list it among regalia transferred on appointment. Demonstration content.",
