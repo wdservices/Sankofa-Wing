@@ -23,6 +23,7 @@ export type MuseumState = {
   helpOpen: boolean;
   reduceMotion: boolean;
   instantTravel: boolean;
+  travelPace: number;
   hintDismissed: boolean;
   move: CameraMove | null;
 };
@@ -41,6 +42,7 @@ const initial: MuseumState = {
   helpOpen: false,
   reduceMotion: false,
   instantTravel: false,
+  travelPace: 1,
   hintDismissed: false,
   move: null,
 };
@@ -62,8 +64,9 @@ export const museumStore = {
   },
   set,
   travel(position: Vec3, target: Vec3, baseDuration = 2000) {
-    const { reduceMotion, instantTravel } = state;
-    const duration = instantTravel ? 0 : reduceMotion ? Math.min(600, baseDuration * 0.35) : baseDuration;
+    const { reduceMotion, instantTravel, travelPace } = state;
+    const paced = baseDuration / (travelPace || 1);
+    const duration = instantTravel ? 0 : reduceMotion ? Math.min(600, paced * 0.35) : paced;
     token += 1;
     set({ move: { position, target, duration, token } });
   },

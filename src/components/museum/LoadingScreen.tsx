@@ -39,7 +39,7 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
           Preparing your museum experience
         </h1>
         <p className="mt-3 text-sm text-muted-foreground">
-          Digital Heritage Archive &amp; Interactive 3D Museum
+          Interactive 3D Museum Experience
         </p>
 
         <div className="mt-10 h-px w-full bg-border">

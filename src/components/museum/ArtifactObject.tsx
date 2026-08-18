@@ -31,6 +31,9 @@ export function ArtifactGeometry({ shape }: { shape: ArtifactShape }) {
     return <latheGeometry args={[points!, shape === "vessel" ? 32 : 24]} />;
   if (shape === "ring") return <torusGeometry args={[0.22, 0.06, 20, 40]} />;
   if (shape === "mask") return <capsuleGeometry args={[0.26, 0.4, 6, 20]} />;
+  if (shape === "drum") return <cylinderGeometry args={[0.3, 0.2, 0.85, 28]} />;
+  if (shape === "stool") return <cylinderGeometry args={[0.42, 0.42, 0.34, 8]} />;
+  if (shape === "plaque") return <boxGeometry args={[0.6, 0.8, 0.08]} />;
   return <capsuleGeometry args={[0.22, 0.5, 6, 16]} />;
 }
 
@@ -40,6 +43,9 @@ const MATERIALS: Record<ArtifactShape, { color: string; metalness: number; rough
   figure: { color: "#7b5a34", metalness: 0.72, roughness: 0.36 },
   head: { color: "#9a9284", metalness: 0.05, roughness: 0.9 },
   ring: { color: "#b98a3f", metalness: 0.85, roughness: 0.28 },
+  drum: { color: "#6b4527", metalness: 0.08, roughness: 0.7 },
+  stool: { color: "#8a6338", metalness: 0.06, roughness: 0.75 },
+  plaque: { color: "#8c7a44", metalness: 0.78, roughness: 0.35 },
 };
 
 export function ArtifactObject({
